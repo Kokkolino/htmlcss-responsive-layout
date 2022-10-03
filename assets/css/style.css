@@ -26,11 +26,11 @@ body{
     margin: auto;
 }
 
-.center {
+/* .center {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .circle{
     border-radius: 50%;
@@ -231,13 +231,17 @@ nav i{
 /* benefits */
 #benefits{
     padding: 4vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #benefits > h1{
     text-align: center;
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 30px auto;
     color: white;
+    flex-basis: 100%;
 }
 
 .ben-item h1,
@@ -365,11 +369,17 @@ footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
 
     .big{
         flex-basis: 66%;
+        position: relative;
+    }
+
+    .big img{
+        position: absolute;
+        bottom: 0;
     }
 
     .little{
@@ -394,7 +404,34 @@ footer{
     }
 
     [id|="testimonial"] {
-        flex-basis: 30%;
+        width: 26vw;
+        height: 26vw;
     }
 
+    .ben-item{
+        flex-basis: 48%;
+    }
+    
+    #about{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #about-1{
+        flex-basis: 54%;
+    }
+
+    #about-2{
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (min-width:769px){
+    #intro {
+        font-size: 1em;
+    }
+
+    .big img{
+        width: 10vw;
+    }
 }
