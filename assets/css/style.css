@@ -37,12 +37,30 @@
     margin-bottom: 30px;
 }
 
+.txt-margin-small *{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .sub-cont{
     border-radius: 20px;
     padding: 15px;
-    text-align: center;
 }
 
+.bg-white{
+   background-color: white;
+}
+
+.bg-violet{
+    background-color: #9792e4;
+}
+
+/* common */
+button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+}
 
 /* header */
 header{
@@ -103,11 +121,8 @@ nav i{
 }
 
 .center button{
-    padding: 10px 30px;
     background-color: #0084fd;
     color: white;
-    border: none;
-    border-radius: 20px;
 }
 
 h3{
@@ -131,14 +146,6 @@ h3{
     color: white;
 }
 
-#v-2{
-    background-color: white;
-}
-
-.bg-violet{
-    background-color: #9792e4;
-}
-
 #v-2 span{
     padding: 13px;
 }
@@ -149,6 +156,7 @@ h3{
     margin: auto;
     margin-top: 6vh;
     margin-bottom: 6vh;
+    display: block;
 }
 
 #testimonials > h5{
@@ -180,7 +188,7 @@ h3{
     line-height: 0;
 }
 
-[id^="testimonial"] {
+[id|="testimonial"] {
     background-size: cover;
     height: 180px;
     background-position: center;
@@ -198,3 +206,31 @@ h3{
     background-image: url(../img/testimonial3.jpg);
 }
 
+/* benefits */
+#benefits{
+    padding: 4vh 0;
+}
+
+#benefits > h1{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.ben-item h1,
+.ben-item h2{
+    color: #9792e4;
+}
+
+.ben-item p{
+    color: #5a6e7f;
+}
+
+.ben-item h1:first-child{
+    font-size: 50px;
+}
+
+.ben-item button{
+    color: white;
+}
