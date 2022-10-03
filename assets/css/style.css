@@ -54,18 +54,36 @@ nav i{
     margin-top: 4vh;
 }
 
-.intro-item-big{
+.intro-item{
     background-color: #b5ddff;
     border-radius: 20px;  
-    padding: 20px 20px 0px 20px;
-    margin: auto;
+    text-align: center;
+    margin: 2vh 0;
 }
 
-.intro-item-big > *{
+.big{
+    padding: 20px 20px 0px 20px;
+}
+
+.little{
+    padding: 20px;
+}
+
+.intro-item > *{
     margin-bottom: 20px;
 }
 
-.intro-item-big img{
+.intro-item p{
+    color: #5a6e7f;
+}
+
+.intro-item i{
+    text-align: center;
+    font-size: 60px;
+    color: #0084fd;
+}
+
+.big img{
     width: 80%;
     display: block;
     margin: auto;
@@ -79,7 +97,8 @@ nav i{
     border-radius: 20px;
 }
 
-h4{
+h3{
     text-align: center;
+    color: #0084fd;
 }
 
