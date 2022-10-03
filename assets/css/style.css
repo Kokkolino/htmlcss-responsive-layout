@@ -26,7 +26,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.circle{
+    border-radius: 50%;
+}
+
 
 /* header */
 header{
@@ -52,6 +57,7 @@ nav i{
 /* sec- intro */
 #intro{
     margin-top: 4vh;
+    margin-bottom: 6vh;
 }
 
 .intro-item{
@@ -102,3 +108,38 @@ h3{
     color: #0084fd;
 }
 
+/* sec- violet */
+#v-sec{
+    background-color: #9792e4;
+    width: 100%;
+    padding: 6vh 0;
+}
+
+#v-sec img{
+    width: 100%;
+
+}
+
+.v-margin *{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#v-1{
+    color: white;
+}
+
+#v-2{
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.violet{
+    background-color: #9792e4;
+}
+
+#v-2 span{
+    padding: 13px;
+}
