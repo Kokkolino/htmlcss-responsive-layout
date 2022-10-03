@@ -36,12 +36,12 @@ body{
     border-radius: 50%;
 }
 
-.txt-margin *{
+.txt-margin > *{
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.txt-margin-small *{
+.txt-margin-small > *{
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -112,7 +112,7 @@ nav i{
     color: #5a6e7f;
 }
 
-.intro-item i{
+.little i{
     text-align: center;
     font-size: 60px;
     color: #0084fd;
@@ -127,11 +127,18 @@ nav i{
 .center button{
     background-color: #0084fd;
     color: white;
+    vertical-align: middle;
 }
 
 #intro h3{
     text-align: center;
     color: #0084fd;
+}
+
+.fa-apple{
+    margin: 0;
+    padding-right: 5px;
+    vertical-align: middle;
 }
 
 /* sec- violet */
@@ -143,7 +150,6 @@ nav i{
 
 #v-sec img{
     width: 100%;
-
 }
 
 #v-1{
@@ -152,6 +158,8 @@ nav i{
 
 #v-2 span{
     padding: 13px;
+    position: relative;
+    left: 42%;
 }
 
 /* sec- testimonials */
@@ -168,34 +176,44 @@ nav i{
     font-weight: 200;
 }
 
-.testimonial-card{
+.card{
     color: white;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.testimonial-card span::before{
-    content: open-quote;
-    font-size: 45px;
-    font-weight: bold;
-    position: relative;
-    top: 10px;
-}
-
-.testimonial-card span::after{
-    content: close-quote;
-    font-size: 45px;
-    font-weight: bold;
-    position: relative;
-    top: 30px;
-}
-
-.testimonial-card span{
-    line-height: 0;
-}
 
 [id|="testimonial"] {
     background-size: cover;
-    height: 180px;
+    height: 160px;
+    width: 160px;
     background-position: center;
+}
+
+.t-info{
+    margin-top: 15px;
+}
+
+.t-info > span{
+    position: relative;
+}
+
+.o-quote::before {
+    content: open-quote;
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: -26px;
+}
+
+.c-quote::after{
+    content: close-quote;
+    font-size: 45px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -37px;
+    right: -26px
 }
 
 #testimonial-1{
@@ -297,7 +315,14 @@ nav i{
     font-size: 1.3em;
     padding: 20px 45px;
     border-radius: 30px;
- }
+}
+
+.fa-brands, .fab {
+    font-weight: 400;
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 0;
+}
 
 .dot{
     height: 5px;
@@ -310,4 +335,66 @@ nav i{
 
 #started a{
     color: white;
+}
+
+/* footer */
+footer{
+    background-color: #333333;
+    padding: 5vh 0;
+}
+
+#foot{
+    color: white;
+    text-align: center;
+}
+
+#foot a{
+    color: #9792e4;
+}
+
+#foot *{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+/* media */
+
+@media screen and (min-width:426px){
+
+    #intro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 2.5vw;
+    }
+
+    .big{
+        flex-basis: 66%;
+    }
+
+    .little{
+        flex-basis: 30%;
+    }
+
+    #v-1 h1{
+        font-size: 6vw
+    }
+
+    #v-2 span {
+        left: 45%;
+    }
+
+    .card{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .t-info{
+        flex-basis: 60%;
+    }
+
+    [id|="testimonial"] {
+        flex-basis: 30%;
+    }
+
 }
