@@ -234,3 +234,35 @@ h3{
 .ben-item button{
     color: white;
 }
+
+/* about us */
+#about-1 h1:first-child{
+    font-size: 40px;
+    color: #9792e4;
+}
+
+#about-1 > p{
+    font-size: 1.2em;
+}
+
+#about-2{
+    color: #9792e4;
+}
+
+#about-img{
+    height: 180px;
+    width: 180px;
+    background-image: url(../img/about.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+#about-img::after{
+    content: open-quote;
+    font-weight: bold;
+    font-size: 100px;
+    color: #9792e4;
+    position: relative;
+    left: 130px;
+    bottom: 10px;
+}
