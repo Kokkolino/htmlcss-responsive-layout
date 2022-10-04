@@ -26,12 +26,6 @@ body{
     margin: auto;
 }
 
-/* .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .circle{
     border-radius: 50%;
 }
@@ -70,6 +64,10 @@ button{
 header{
     background-color: #0084fd;
     height: 5vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 #logo{
@@ -81,6 +79,23 @@ nav{
     height: 100%;
 }
 
+#nav-hidden{
+    display: none;
+}
+
+#nav-hidden *{
+    margin-left: 10px;
+}
+
+#nav-hidden a{
+    color: white;
+    text-decoration: none;
+}
+
+#nav-hidden a:hover{
+    text-decoration: underline;
+}
+
 nav i{
     font-size: 3.5vh;
     color: white;
@@ -89,23 +104,26 @@ nav i{
 /* main */
 /* sec- intro */
 #intro{
-    margin-top: 4vh;
+    margin-top: 10vh;
     margin-bottom: 6vh;
+    flex-wrap: wrap;
 }
 
 .intro-item{
     background-color: #b5ddff;
     border-radius: 20px;  
-    text-align: center;
     margin: 2vh 0;
 }
 
 .big{
     padding: 20px 20px 0px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .little{
     padding: 20px;
+    text-align: center;
 }
 
 .intro-item p{
@@ -121,13 +139,11 @@ nav i{
 .big img{
     width: 80%;
     display: block;
-    margin: auto;
 }
 
-.center button{
+.big button{
     background-color: #0084fd;
     color: white;
-    vertical-align: middle;
 }
 
 #intro h3{
@@ -362,24 +378,32 @@ footer{
 }
 
 /* media */
+@media screen and (min-width:1px){
+    .big img{
+        margin: auto;
+    }
+}
+
+
 
 @media screen and (min-width:426px){
 
     #intro {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         font-size: 2vw;
     }
 
     .big{
         flex-basis: 66%;
-        position: relative;
+        justify-content: flex-start;
     }
 
-    .big img{
-        position: absolute;
-        bottom: 0;
+    #phone{
+        flex-basis: 80%;
+    }
+
+    #phone img{
+        margin: 0;
     }
 
     .little{
@@ -427,11 +451,54 @@ footer{
 }
 
 @media screen and (min-width:769px){
+    
+    #nav-hidden{
+        display: block;
+    }
+    
+    nav .fa-bars{
+        display: none;
+    }
+    
+    
     #intro {
         font-size: 1em;
     }
 
-    .big img{
-        width: 10vw;
+    #phone{
+        flex-basis: 50%;
+        
+    }
+
+    #phone img{ 
+        width: 100%; 
+        height: 100%;
+    }
+
+    #appstore{
+        flex-basis: 50%;
+    }
+
+    #v-cont{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    #v-1{
+        flex-basis: 43%;
+    }
+
+    #v-2{
+        flex-basis: 43%;
+    }
+
+    [id|="testimonial"] {
+        width: 16vw;
+        height: 16vw;
+    }
+
+    .ben-item {
+        flex-basis: 31%;
     }
 }
